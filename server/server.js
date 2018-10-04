@@ -11,6 +11,7 @@ const config  = require('./config/config').get(process.env.NODE_ENV)
  * End require libs
  */
 
+ /** Start config */
 
 mongoose.Promise = global.Promise;
 mongoose.connect(config.DATABASE)
@@ -22,3 +23,5 @@ app.listen(port,()=>{
 })
 app.use(bodyParser.json());
 app.use(cookieParser())
+
+/** End config */
